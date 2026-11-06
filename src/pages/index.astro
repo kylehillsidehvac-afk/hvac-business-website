@@ -1,9 +1,8 @@
 
 ---
 const businessName = "Hillside HVAC & Home Repair";
-const location = "Hopewell Junction, NY";
 const description =
-  "Hillside HVAC & Home Repair provides residential heating, air conditioning, and home repair services in Hopewell Junction, NY and surrounding communities.";
+  "Residential HVAC and home repair services throughout Dutchess County, NY. Contact Hillside HVAC & Home Repair for your home comfort needs.";
 ---
 
 <!DOCTYPE html>
@@ -11,7 +10,7 @@ const description =
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hillside HVAC & Home Repair | Hopewell Junction, NY</title>
+    <title>Hillside HVAC & Home Repair | Dutchess County, NY</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#1f305c" />
@@ -19,12 +18,14 @@ const description =
 
   <body>
     <header>
-      <a class="logo" href="/">
-        <span>HILLSIDE</span>
-        <small>HVAC & HOME REPAIR</small>
+      <a class="logo" href="/" aria-label="Hillside HVAC & Home Repair home">
+        <img
+          src="/images/hillside-logo.jpg"
+          alt="Hillside HVAC & Home Repair"
+        />
       </a>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#service-area">Service Areas</a>
@@ -34,40 +35,54 @@ const description =
 
     <main>
       <section class="hero">
+        <img
+          class="hero-photo"
+          src="/images/kyle-hvac.jpg"
+          alt="Kyle of Hillside HVAC & Home Repair standing beside a residential water heater"
+          fetchpriority="high"
+        />
+
         <div class="hero-content">
-          <p class="eyebrow">PROUDLY SERVING HOPEWELL JUNCTION, NY</p>
+          <p class="eyebrow">PROUDLY SERVING DUTCHESS COUNTY, NY</p>
+
           <h1>Comfort You Can Count On. Service You Can Trust.</h1>
+
           <p class="hero-description">
-            From heating and air conditioning to home repairs,
-            Hillside HVAC & Home Repair is here to help keep
-            your home comfortable.
+            Your home deserves dependable heating, cooling, and
+            home repair services. Let Hillside help keep your
+            home comfortable.
           </p>
+
           <a href="#contact" class="button">REQUEST SERVICE</a>
-          <a href="#services" class="secondary-link">Explore Our Services →</a>
+          <a href="#services" class="secondary-link">
+            Explore Our Services →
+          </a>
         </div>
       </section>
 
-      <section class="intro">
+      <section class="intro fade-section">
         <p class="eyebrow">WELCOME TO HILLSIDE</p>
         <h2>Your Local Home Comfort & Repair Resource</h2>
         <p>
           Your home deserves attention and care. Hillside HVAC &
           Home Repair is focused on helping homeowners with their
-          heating, cooling, and home repair needs in Hopewell
-          Junction and surrounding communities.
+          heating, cooling, and home repair needs throughout
+          Dutchess County, New York.
         </p>
       </section>
 
       <section class="services" id="services">
-        <p class="eyebrow">WHAT WE DO</p>
-        <h2>Our Services</h2>
-        <p class="section-description">
-          Home comfort and repair solutions to help keep your
-          home running smoothly.
-        </p>
+        <div class="fade-section">
+          <p class="eyebrow">WHAT WE DO</p>
+          <h2>Our Services</h2>
+          <p class="section-description">
+            Home comfort and repair solutions to help keep your
+            home running smoothly.
+          </p>
+        </div>
 
         <div class="service-grid">
-          <article class="service-card">
+          <article class="service-card fade-section">
             <div class="service-icon">01</div>
             <h3>Heating Services</h3>
             <p>
@@ -76,7 +91,7 @@ const description =
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card fade-section">
             <div class="service-icon">02</div>
             <h3>Air Conditioning</h3>
             <p>
@@ -85,7 +100,7 @@ const description =
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card fade-section">
             <div class="service-icon">03</div>
             <h3>Heat Pumps</h3>
             <p>
@@ -94,7 +109,7 @@ const description =
             </p>
           </article>
 
-          <article class="service-card">
+          <article class="service-card fade-section">
             <div class="service-icon">04</div>
             <h3>Home Repair</h3>
             <p>
@@ -106,28 +121,29 @@ const description =
       </section>
 
       <section class="local" id="service-area">
-        <div>
+        <div class="fade-section">
           <p class="eyebrow">YOUR LOCAL SERVICE AREA</p>
-          <h2>Proud to Serve Hopewell Junction, NY</h2>
+          <h2>Serving Dutchess County, NY</h2>
           <p>
-            Hillside HVAC & Home Repair is based around serving
-            homeowners in Hopewell Junction and nearby
-            Hudson Valley communities.
+            Hillside HVAC & Home Repair is focused on helping
+            homeowners throughout Dutchess County with their
+            heating, cooling, and home repair needs.
           </p>
         </div>
       </section>
 
-      <section class="about" id="about">
+      <section class="about fade-section" id="about">
         <p class="eyebrow">ABOUT HILLSIDE</p>
         <h2>Taking Care of Your Home Starts Here</h2>
         <p>
           Your home is one of your biggest investments.
-          We're building Hillside around providing homeowners
-          with a dependable resource for HVAC and home repair.
+          Hillside HVAC & Home Repair is committed to being
+          a dependable resource for your residential HVAC
+          and home repair needs.
         </p>
       </section>
 
-      <section class="contact" id="contact">
+      <section class="contact fade-section" id="contact">
         <p class="eyebrow">LET'S GET STARTED</p>
         <h2>How Can We Help With Your Home?</h2>
         <p>
@@ -136,19 +152,41 @@ const description =
         </p>
         <p class="contact-note">
           Contact information and service request options
-          will be added here.
+          coming soon.
         </p>
       </section>
     </main>
 
     <footer>
-      <a class="logo footer-logo" href="/">
-        <span>HILLSIDE</span>
-        <small>HVAC & HOME REPAIR</small>
-      </a>
-      <p>Serving Hopewell Junction, NY and surrounding areas.</p>
+      <img
+        src="/images/hillside-logo.jpg"
+        alt="Hillside HVAC & Home Repair"
+      />
+      <p>Serving Dutchess County, New York.</p>
       <p>© {new Date().getFullYear()} {businessName}. All rights reserved.</p>
     </footer>
+
+    <script>
+      const sections = document.querySelectorAll(".fade-section");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      } else {
+        sections.forEach((section) => section.classList.add("visible"));
+      }
+    </script>
   </body>
 </html>
 
@@ -178,28 +216,19 @@ const description =
 
   header {
     background: var(--white);
-    min-height: 90px;
-    padding: 18px 7%;
+    min-height: 100px;
+    padding: 12px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
   }
 
-  .logo {
-    color: var(--navy);
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-    font-weight: 800;
-    letter-spacing: 2px;
-    font-size: 25px;
-  }
-
-  .logo small {
-    font-size: 10px;
-    letter-spacing: 2px;
+  .logo img {
+    display: block;
+    width: 210px;
+    height: 75px;
+    object-fit: contain;
   }
 
   nav {
@@ -215,6 +244,10 @@ const description =
     font-size: 14px;
   }
 
+  nav a:hover {
+    color: var(--red);
+  }
+
   .nav-button,
   .button {
     background: var(--red);
@@ -227,18 +260,44 @@ const description =
   }
 
   .hero {
-    min-height: 530px;
+    min-height: 590px;
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 80px 9%;
-    background:
-      linear-gradient(90deg, rgba(20, 34, 66, .96),
-      rgba(31, 48, 92, .78));
-    color: white;
+    overflow: hidden;
+    background: var(--navy);
+    padding: 75px 7%;
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 76% 42%;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #1f305c 0%,
+      #1f305c 28%,
+      rgba(31, 48, 92, 0.96) 39%,
+      rgba(31, 48, 92, 0.78) 53%,
+      rgba(31, 48, 92, 0.22) 76%,
+      rgba(31, 48, 92, 0.05) 100%
+    );
   }
 
   .hero-content {
-    max-width: 720px;
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    color: white;
   }
 
   .eyebrow {
@@ -260,7 +319,7 @@ const description =
 
   .hero-description {
     font-size: 18px;
-    max-width: 600px;
+    max-width: 560px;
     margin-bottom: 30px;
   }
 
@@ -285,7 +344,7 @@ const description =
   .intro,
   .about,
   .contact {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
     text-align: center;
   }
@@ -362,20 +421,51 @@ const description =
     background: #152342;
     color: white;
     text-align: center;
-    padding: 45px 20px;
+    padding: 40px 20px;
     font-size: 13px;
   }
 
-  .footer-logo {
-    color: white;
-    align-items: center;
-    margin-bottom: 20px;
+  footer img {
+    width: 190px;
+    max-height: 90px;
+    object-fit: contain;
+    background: white;
+    border-radius: 4px;
+    padding: 5px;
+  }
+
+  .fade-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms ease, transform 700ms ease;
+  }
+
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .fade-section {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
   }
 
   @media (max-width: 700px) {
     header {
       flex-direction: column;
-      padding: 22px 15px;
+      padding: 15px;
+    }
+
+    .logo img {
+      width: 175px;
+      height: 65px;
     }
 
     nav {
@@ -389,8 +479,23 @@ const description =
     }
 
     .hero {
-      min-height: 480px;
-      padding: 65px 7%;
+      min-height: 620px;
+      padding: 55px 7%;
+      align-items: flex-end;
+    }
+
+    .hero-photo {
+      object-position: 72% center;
+    }
+
+    .hero::after {
+      background: linear-gradient(
+        0deg,
+        rgba(31, 48, 92, 1) 0%,
+        rgba(31, 48, 92, 0.96) 38%,
+        rgba(31, 48, 92, 0.60) 70%,
+        rgba(31, 48, 92, 0.15) 100%
+      );
     }
 
     .secondary-link {
