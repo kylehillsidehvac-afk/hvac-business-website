@@ -1,0 +1,409 @@
+
+---
+const businessName = "Hillside HVAC & Home Repair";
+const location = "Hopewell Junction, NY";
+const description =
+  "Hillside HVAC & Home Repair provides residential heating, air conditioning, and home repair services in Hopewell Junction, NY and surrounding communities.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hillside HVAC & Home Repair | Hopewell Junction, NY</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1f305c" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="/">
+        <span>HILLSIDE</span>
+        <small>HVAC & HOME REPAIR</small>
+      </a>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#service-area">Service Areas</a>
+        <a href="#contact" class="nav-button">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">PROUDLY SERVING HOPEWELL JUNCTION, NY</p>
+          <h1>Comfort You Can Count On. Service You Can Trust.</h1>
+          <p class="hero-description">
+            From heating and air conditioning to home repairs,
+            Hillside HVAC & Home Repair is here to help keep
+            your home comfortable.
+          </p>
+          <a href="#contact" class="button">REQUEST SERVICE</a>
+          <a href="#services" class="secondary-link">Explore Our Services →</a>
+        </div>
+      </section>
+
+      <section class="intro">
+        <p class="eyebrow">WELCOME TO HILLSIDE</p>
+        <h2>Your Local Home Comfort & Repair Resource</h2>
+        <p>
+          Your home deserves attention and care. Hillside HVAC &
+          Home Repair is focused on helping homeowners with their
+          heating, cooling, and home repair needs in Hopewell
+          Junction and surrounding communities.
+        </p>
+      </section>
+
+      <section class="services" id="services">
+        <p class="eyebrow">WHAT WE DO</p>
+        <h2>Our Services</h2>
+        <p class="section-description">
+          Home comfort and repair solutions to help keep your
+          home running smoothly.
+        </p>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">01</div>
+            <h3>Heating Services</h3>
+            <p>
+              Heating solutions to help keep your home warm
+              and comfortable through the colder months.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">02</div>
+            <h3>Air Conditioning</h3>
+            <p>
+              Home cooling services to help you stay comfortable
+              when temperatures rise.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">03</div>
+            <h3>Heat Pumps</h3>
+            <p>
+              Home heat pump solutions for year-round
+              heating and cooling comfort.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">04</div>
+            <h3>Home Repair</h3>
+            <p>
+              Residential home repair services to help maintain
+              and care for your home.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="local" id="service-area">
+        <div>
+          <p class="eyebrow">YOUR LOCAL SERVICE AREA</p>
+          <h2>Proud to Serve Hopewell Junction, NY</h2>
+          <p>
+            Hillside HVAC & Home Repair is based around serving
+            homeowners in Hopewell Junction and nearby
+            Hudson Valley communities.
+          </p>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <p class="eyebrow">ABOUT HILLSIDE</p>
+        <h2>Taking Care of Your Home Starts Here</h2>
+        <p>
+          Your home is one of your biggest investments.
+          We're building Hillside around providing homeowners
+          with a dependable resource for HVAC and home repair.
+        </p>
+      </section>
+
+      <section class="contact" id="contact">
+        <p class="eyebrow">LET'S GET STARTED</p>
+        <h2>How Can We Help With Your Home?</h2>
+        <p>
+          Have a heating, cooling, or home repair project?
+          Get in touch with Hillside HVAC & Home Repair.
+        </p>
+        <p class="contact-note">
+          Contact information and service request options
+          will be added here.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <a class="logo footer-logo" href="/">
+        <span>HILLSIDE</span>
+        <small>HVAC & HOME REPAIR</small>
+      </a>
+      <p>Serving Hopewell Junction, NY and surrounding areas.</p>
+      <p>© {new Date().getFullYear()} {businessName}. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    --navy: #1f305c;
+    --red: #d33124;
+    --white: #ffffff;
+    --light: #f4f6fa;
+    --text: #303846;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  header {
+    background: var(--white);
+    min-height: 90px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .logo {
+    color: var(--navy);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 25px;
+  }
+
+  .logo small {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .nav-button,
+  .button {
+    background: var(--red);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .hero {
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    background:
+      linear-gradient(90deg, rgba(20, 34, 66, .96),
+      rgba(31, 48, 92, .78));
+    color: white;
+  }
+
+  .hero-content {
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+
+  .hero .eyebrow {
+    color: #ffb0a8;
+  }
+
+  h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.12;
+    margin: 15px 0 22px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .secondary-link {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  section:not(.hero) {
+    padding: 85px 9%;
+  }
+
+  h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 10px 0 20px;
+  }
+
+  .intro,
+  .about,
+  .contact {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .intro p:not(.eyebrow),
+  .about p:not(.eyebrow),
+  .contact p:not(.eyebrow) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .services {
+    background: var(--light);
+    text-align: center;
+  }
+
+  .section-description {
+    margin-bottom: 40px;
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+  }
+
+  .service-card {
+    background: white;
+    text-align: left;
+    padding: 32px;
+    border-radius: 6px;
+    border-bottom: 3px solid var(--red);
+  }
+
+  .service-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+  }
+
+  .service-icon {
+    color: var(--red);
+    font-weight: 800;
+    font-size: 23px;
+  }
+
+  .local {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+  }
+
+  .local h2 {
+    color: white;
+  }
+
+  .local p:not(.eyebrow) {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .contact {
+    background: var(--light);
+  }
+
+  .contact-note {
+    margin-top: 25px !important;
+    font-style: italic;
+    color: #64748b;
+  }
+
+  footer {
+    background: #152342;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    font-size: 13px;
+  }
+
+  .footer-logo {
+    color: white;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      padding: 22px 15px;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    nav a {
+      font-size: 12px;
+    }
+
+    .hero {
+      min-height: 480px;
+      padding: 65px 7%;
+    }
+
+    .secondary-link {
+      display: block;
+      margin: 22px 0 0;
+    }
+
+    section:not(.hero) {
+      padding: 60px 7%;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
