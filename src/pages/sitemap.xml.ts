@@ -2,6 +2,11 @@ import type { APIRoute } from 'astro';
 
 const pages = [
   '',
+  'repair',
+  'maintain',
+  'improve',
+  'about',
+  'contact',
 ];
 
 export const GET: APIRoute = ({ site }) => {
