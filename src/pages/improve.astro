@@ -1,0 +1,639 @@
+
+---
+const businessName = "Hillside HVAC & Home Repair";
+const description =
+  "Explore home comfort and efficiency improvements from Hillside HVAC & Home Repair, serving homeowners throughout Dutchess County, NY.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Comfort & Efficiency | Dutchess County, NY</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1f305c" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="/" aria-label="Hillside HVAC & Home Repair home">
+        <img
+          src="/images/hillside-h-logo.jpg"
+          alt="Hillside HVAC & Home Repair"
+        />
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="/about">About</a>
+        <a href="#service-area">Service Areas</a>
+        <a href="/contact" class="nav-button">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img
+          class="hero-photo"
+          src="/images/improve-banner-winter-1.jpg"
+          alt="A warm, inviting home during the winter season"
+          fetchpriority="high"
+        />
+
+        <div class="hero-content">
+          <p class="eyebrow">PROUDLY SERVING DUTCHESS COUNTY, NY</p>
+
+          <h1>Make Your Home More Comfortable and Efficient.</h1>
+
+          <p class="hero-description">
+             Make the most of your existing HVAC equipment and your home.
+  	From updated thermostats and system controls to air sealing
+  	and insulation improvements, Hillside can help you find
+ 	practical ways to improve comfort and manage energy use.
+          </p>
+
+          <a href="/contact" class="button">REQUEST SERVICE</a>
+          <a href="#services" class="secondary-link">
+            Explore Our Services →
+          </a>
+        </div>
+      </section>
+
+      <section class="intro fade-section">
+        <p class="eyebrow">IMPROVE YOUR COMFORT</p>
+        <h2>Comfort. Efficiency. Peace of Mind.</h2>
+        <p>
+          Improving your home's comfort may be as simple as installing
+  the right thermostat for your needs, or as involved as an
+  insulation upgrade with improved ventilation. Put years of
+  HVAC and home comfort experience to work for you. We'll help
+  identify practical improvements that make your home more
+  comfortable and efficient.
+        </p>
+      </section>
+
+<section class="improve-list-section fade-section">
+  <p class="eyebrow">IMPROVE</p>
+  <h2>Home Comfort</h2>
+  <p class="improve-list-description">
+     Practical improvements for indoor air quality, system controls,
+  insulation, ventilation, and whole-home comfort.
+  </p>
+
+<ul class="improve-list">
+  <li>Wi-Fi thermostat upgrades</li>
+  <li>System control upgrades</li>
+  <li>Draft reduction</li>
+  <li>Insulation upgrades</li>
+  <li>Indoor air quality improvements</li>
+  <li>Media air filter installations</li>
+  <li>UV air scrubber installations</li>
+  <li>Whole-home air sealing</li>
+  <li>Automatic whole-home humidifiers</li>
+  <li>Automatic whole-home dehumidifiers</li>
+  <li>Energy recovery ventilator (ERV) installations</li>
+  <li>And more!</li>
+</ul>
+</section>
+
+<section class="services" id="services">
+  <div class="fade-section">
+    <p class="eyebrow">SERVICES</p>
+    <h2>How Can We Help?</h2>
+    <p class="section-description">
+      Explore our residential heating and home improvement services.
+    </p>
+  </div>
+
+  <div class="service-tabs fade-section">
+    <a href="/repair" class="service-tab" data-service-preview="repair">REPAIR</a>
+    <a href="/maintain" class="service-tab" data-service-preview="maintain">MAINTAIN</a>
+    <a href="/improve" class="service-tab" data-service-preview="improve">IMPROVE</a>
+  </div>
+
+  <p class="service-preview" id="service-preview" aria-live="polite">
+    No heat · Water leaks · System lockouts · Noisy equipment
+  </p>
+</section>
+
+<section class="service-area fade-section" id="service-area">
+  <p class="eyebrow">LOCAL SERVICE</p>
+  <h2>Areas We Serve</h2>
+  <p>Proudly serving homeowners throughout Dutchess County, New York.</p>
+
+  <ul class="area-list">
+    <li>Poughkeepsie</li>
+    <li>East Fishkill</li>
+    <li>Wappinger</li>
+    <li>Fishkill</li>
+    <li>Hyde Park</li>
+    <li>LaGrange</li>
+    <li>Beekman</li>
+    <li>Red Hook</li>
+    <li>Pleasant Valley</li>
+    <li>Dover</li>
+    <li>Pawling</li>
+    <li>Rhinebeck</li>
+    <li>Union Vale</li>
+    <li>Washington</li>
+    <li>Clinton</li>
+    <li>Amenia</li>
+    <li>Stanford</li>
+    <li>North East</li>
+    <li>Milan</li>
+    <li>Pine Plains</li>
+  </ul>
+</section>
+</main>
+
+  
+  
+
+
+
+    <footer>
+	<a href="/">
+      <img
+        src="/images/hillside-h-logo.jpg"
+        alt="Hillside HVAC & Home Repair"
+      />
+	</a>
+      <p>Serving Dutchess County, New York.</p>
+      <p>© {new Date().getFullYear()} {businessName}. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll(".fade-section");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      } else {
+        sections.forEach((section) => section.classList.add("visible"));
+      }
+    const previewText = {
+  repair: "No heat · Water leaks · System lockouts · Noisy equipment",
+  maintain: "Boilers · Furnaces · Oil burners · Heat pumps",
+  improve: "Efficiency · Air quality · Accessibility"
+};
+
+const preview = document.querySelector("#service-preview");
+
+document.querySelectorAll("[data-service-preview]").forEach((link) => {
+  const showPreview = () => {
+    preview.textContent = previewText[link.dataset.servicePreview];
+  };
+
+  link.addEventListener("mouseenter", showPreview);
+  link.addEventListener("focus", showPreview);
+});
+   </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --navy: #1f305c;
+    --red: #d33124;
+    --white: #ffffff;
+    --light: #f4f6fa;
+    --text: #303846;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  header {
+    background: var(--white);
+    min-height: 100px;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .logo img {
+    display: block;
+    width: 210px;
+    height: 75px;
+    object-fit: contain;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    color: var(--red);
+  }
+nav a.nav-button:hover,
+nav a.nav-button:focus-visible {
+  background: white;
+  color: var(--red);
+}
+
+  .nav-button,
+  .button {
+    background: var(--red);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+  }
+.button {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.button:hover {
+  background: white;
+  color: var(--red);
+}
+.secondary-link {
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.secondary-link:hover {
+  color: var(--red);
+  transform: translateX(5px);
+}
+
+  .hero {
+    min-height: 590px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--navy);
+    padding: 75px 7%;
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 76% 70%;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #1f305c 0%,
+      #1f305c 28%,
+      rgba(31, 48, 92, 0.96) 39%,
+      rgba(31, 48, 92, 0.78) 53%,
+      rgba(31, 48, 92, 0.22) 76%,
+      rgba(31, 48, 92, 0.05) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    color: white;
+  }
+
+  .eyebrow {
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+
+  .hero .eyebrow {
+    color: #ffb0a8;
+  }
+
+  h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.12;
+    margin: 15px 0 22px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 560px;
+    margin-bottom: 30px;
+  }
+
+  .secondary-link {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  section:not(.hero) {
+    padding: 85px 9%;
+  }
+
+  h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 10px 0 20px;
+  }
+
+  .intro,
+  .about,
+  .contact {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .intro p:not(.eyebrow),
+  .about p:not(.eyebrow),
+  .contact p:not(.eyebrow) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .services {
+    background: var(--light);
+    text-align: center;
+  }
+
+  .section-description {
+    margin-bottom: 40px;
+  }
+.service-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  max-width: 850px;
+  margin: 35px auto 0;
+}
+
+.service-tab {
+  display: inline-block;
+  min-width: 190px;
+  padding: 17px 25px;
+  background: var(--navy);
+  color: white;
+  border: 2px solid var(--navy);
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: background 200ms ease;
+}
+
+.service-tab:hover,
+.service-tab:focus {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.service-preview {
+  max-width: 850px;
+  min-height: 55px;
+  margin: 28px auto 0;
+  padding: 18px;
+  background: white;
+  color: var(--navy);
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 3px solid var(--red);
+}
+
+.service-area {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+}
+
+.service-area h2 {
+  color: white;
+}
+
+.service-area .eyebrow {
+  color: #ffb0a8;
+}
+
+.area-list {
+  max-width: 900px;
+  margin: 30px auto 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.area-list li {
+  padding: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+.area-list li {
+  transition: color 0.25s ease;
+}
+
+.area-list li:hover {
+  color: var(--red);
+}
+
+.improve-list-section {
+  background: var(--red);
+  color: white;
+  text-align: center;
+}
+
+.improve-list-section h2 {
+  color: white;
+}
+
+.improve-list-section .eyebrow {
+  color: white;
+}
+
+.improve-list-description {
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.improve-list {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  text-align: left;
+}
+
+.improve-list li {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .improve-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .improve-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+  .contact {
+    background: var(--light);
+  }
+
+  .contact-note {
+    margin-top: 25px !important;
+    font-style: italic;
+    color: #64748b;
+  }
+
+  footer {
+    background: #152342;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+  }
+
+footer img {
+  display: block;
+  width: 210px !important;
+  height: 75px !important;
+  max-width: 210px;
+  max-height: 75px;
+  object-fit: contain;
+  margin: 0 auto;
+  background: white;
+  border-radius: 4px;
+  padding: 0;
+}
+  .fade-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms ease, transform 700ms ease;
+  }
+
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .fade-section {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .logo img {
+      width: 175px;
+      height: 65px;
+    }
+footer img {
+  width: 175px !important;
+  height: 65px !important;
+}
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    nav a {
+      font-size: 12px;
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 55px 7%;
+      align-items: flex-end;
+    }
+
+    .hero-photo {
+      object-position: 72% center;
+    }
+
+    .hero::after {
+      background: linear-gradient(
+        0deg,
+        rgba(31, 48, 92, 1) 0%,
+        rgba(31, 48, 92, 0.96) 38%,
+        rgba(31, 48, 92, 0.60) 70%,
+        rgba(31, 48, 92, 0.15) 100%
+      );
+    }
+
+    .secondary-link {
+      display: block;
+      margin: 22px 0 0;
+    }
+
+    section:not(.hero) {
+      padding: 60px 7%;
+    }
+
+    .service-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

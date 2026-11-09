@@ -1,0 +1,514 @@
+---
+const businessName = "Hillside HVAC & Home Repair";
+const description =
+  "Contact Hillside HVAC & Home Repair for residential heating, cooling, and home repair services throughout Dutchess County, NY.";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Hillside HVAC & Home Repair | Dutchess County, NY</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1f305c" />
+  </head>
+
+  <body>
+    <header>
+      <a class="logo" href="/" aria-label="Hillside HVAC & Home Repair home">
+        <img
+          src="/images/hillside-h-logo.jpg"
+          alt="Hillside HVAC & Home Repair"
+        />
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="/#services">Services</a>
+        <a href="/about">About</a>
+        <a href="/#service-area">Service Areas</a>
+        <a href="/contact" class="nav-button">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img
+          class="hero-photo"
+          src="/images/contact-banner-1.jpg"
+          alt="Hands holding a telephone"
+          fetchpriority="high"
+        />
+
+        <div class="hero-content">
+          <p class="eyebrow">HILLSIDE HVAC & HOME REPAIR</p>
+
+          <h1>Let's Talk About Your Home.</h1>
+
+          <p class="hero-description">
+            Whether you need a repair, routine maintenance, or help
+            improving your home's comfort, we're here to help.
+            Reach out and let's discuss what you need.
+          </p>
+
+          <a href="#contact-details" class="button">GET IN TOUCH</a>
+        </div>
+      </section>
+
+      <section class="intro fade-section">
+        <p class="eyebrow">WE'RE HERE TO HELP</p>
+        <h2>How Can We Help You?</h2>
+        <p>
+          Every home is different, and every service call starts
+          with understanding what's going on. Contact Hillside
+          HVAC & Home Repair to discuss your heating, cooling,
+          or home repair needs.
+        </p>
+      </section>
+
+      <section class="contact-details fade-section" id="contact-details">
+        <p class="eyebrow">CONTACT HILLSIDE</p>
+        <h2>Get in Touch</h2>
+        <p class="section-description">
+          Call or email to discuss your project or request service.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Call</h3>
+            <!-- Replace the placeholder below with your business phone number.
+                 Update both the tel link and the visible phone number. -->
+            <p>
+              <a href="tel:+18453924678">(845) 392-4678</a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Email</h3>
+            <!-- Replace the placeholder below with your business email address.
+                 Update both the mailto link and the visible email address. -->
+            <p>
+              <a href="mailto:kyle.hillsidehvac@gmail.com">kyle.hillsidehvac@gmail.com</a>
+            </p>
+          </div>
+
+          <div class="contact-card">
+  	   <h3>Request Service</h3>
+  		<p>
+    		Tell us a little about what your home needs.
+    		We'll be glad to discuss the next steps.
+  		</p>
+  		<p>
+    		<a href="mailto:kyle.hillsidehvac@gmail.com">Email Us to Get Started</a>
+  		</p>
+	  </div>
+        </div>
+      </section>
+
+      <section class="hours fade-section">
+        <p class="eyebrow">WHEN TO REACH US</p>
+        <h2>Business Hours</h2>
+        <p>
+          <!-- Replace this text with your actual business hours. -->
+          Monday – Saturday: 8:00 AM – 5:30 PM<br />
+ 	  Sunday: Closed
+        </p>
+      </section>
+
+      <section class="service-area fade-section">
+        <p class="eyebrow">LOCAL SERVICE</p>
+        <h2>Serving Dutchess County, NY</h2>
+        <p>
+          Hillside HVAC & Home Repair proudly serves homeowners
+          throughout Dutchess County and the surrounding communities.
+        </p>
+        <a href="/#service-area" class="area-link">
+          View Our Service Areas →
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <a href="/" aria-label="Return to Hillside HVAC home">
+        <img
+          src="/images/hillside-h-logo.jpg"
+          alt="Hillside HVAC & Home Repair"
+        />
+      </a>
+      <p>Serving Dutchess County, New York.</p>
+      <p>© {new Date().getFullYear()} {businessName}. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const sections = document.querySelectorAll(".fade-section");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+      } else {
+        sections.forEach((section) => section.classList.add("visible"));
+      }
+    </script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --navy: #1f305c;
+    --red: #d33124;
+    --white: #ffffff;
+    --light: #f4f6fa;
+    --text: #303846;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  header {
+    background: var(--white);
+    min-height: 100px;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .logo img {
+    display: block;
+    width: 210px;
+    height: 75px;
+    object-fit: contain;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+
+  nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  nav a:hover {
+    color: var(--red);
+  }
+
+  .nav-button,
+  .button {
+    background: var(--red);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  .button {
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .button:hover {
+    background: white;
+    color: var(--red);
+  }
+
+  .hero {
+    min-height: 500px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--navy);
+    padding: 75px 7%;
+  }
+
+  .hero-photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 76% 20%;
+  }
+
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      #1f305c 0%,
+      #1f305c 28%,
+      rgba(31, 48, 92, 0.96) 39%,
+      rgba(31, 48, 92, 0.78) 53%,
+      rgba(31, 48, 92, 0.22) 76%,
+      rgba(31, 48, 92, 0.05) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    color: white;
+  }
+
+  .eyebrow {
+    color: var(--red);
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+
+  .hero .eyebrow {
+    color: #ffb0a8;
+  }
+
+  h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.12;
+    margin: 15px 0 22px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+    max-width: 560px;
+    margin-bottom: 30px;
+  }
+
+  section:not(.hero) {
+    padding: 85px 9%;
+  }
+
+  h2 {
+    color: var(--navy);
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+    margin: 10px 0 20px;
+  }
+
+  .intro {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .intro p:not(.eyebrow) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .contact-details {
+    background: var(--light);
+    text-align: center;
+  }
+
+  .section-description {
+    margin-bottom: 35px;
+  }
+
+  .contact-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .contact-card {
+    background: white;
+    padding: 30px 20px;
+    border-bottom: 4px solid var(--red);
+  }
+
+  .contact-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+    margin-top: 0;
+  }
+
+  .contact-card p {
+    margin-bottom: 0;
+  }
+
+  .contact-card a {
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-card a:hover {
+    color: var(--red);
+  }
+
+  .hours {
+    text-align: center;
+  }
+
+  .hours p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .service-area {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+  }
+
+  .service-area h2 {
+    color: white;
+  }
+
+  .service-area .eyebrow {
+    color: #ffb0a8;
+  }
+
+  .service-area p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto 25px;
+  }
+
+  .area-link {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+  }
+
+  .area-link:hover {
+    color: #ffb0a8;
+    transform: translateX(5px);
+  }
+
+  footer {
+    background: #152342;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 13px;
+  }
+
+  footer img {
+    display: block;
+    width: 210px;
+    height: 75px;
+    object-fit: contain;
+    margin: 0 auto;
+    background: white;
+    border-radius: 4px;
+  }
+
+  .fade-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms ease, transform 700ms ease;
+  }
+
+  .fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .fade-section {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      max-width: 550px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    header {
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    .logo img {
+      width: 175px;
+      height: 65px;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    nav a {
+      font-size: 12px;
+    }
+
+    .hero {
+      min-height: 620px;
+      padding: 55px 7%;
+      align-items: flex-end;
+    }
+
+    .hero-photo {
+      object-position: 72% center;
+    }
+
+    .hero::after {
+      background: linear-gradient(
+        0deg,
+        rgba(31, 48, 92, 1) 0%,
+        rgba(31, 48, 92, 0.96) 38%,
+        rgba(31, 48, 92, 0.60) 70%,
+        rgba(31, 48, 92, 0.15) 100%
+      );
+    }
+
+    section:not(.hero) {
+      padding: 60px 7%;
+    }
+
+    footer img {
+      width: 175px;
+      height: 65px;
+    }
+  }
+</style>
